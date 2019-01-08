@@ -1,13 +1,13 @@
-local _, nCore = ...
+local _, vCore = ...
 
 -- Forked from rVignette by zork - 2014
 
-function nCore:VignetteAlert()
+function vCore:VignetteAlert()
 
     local addon = CreateFrame("Frame")
 
     local function OnEvent(self, event, id)
-        if not nCoreDB.VignetteAlert then return end
+        if not vCoreDB.VignetteAlert then return end
     
         if event == "VIGNETTE_MINIMAP_UPDATED" then
             if not id then return end
