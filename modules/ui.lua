@@ -87,7 +87,7 @@ end
 
 -- tracking bar
 function vCore:HideTrackingBar()
-    if not vCoreDB.TrackingBar then return end
+    if not vCoreDB.HideTrackingBar then return end
 
     StatusTrackingBarManager:Hide()
 end
@@ -150,6 +150,10 @@ end
 -- clean action bars
 function vCore:CleanActionBars()
     if not vCoreDB.CleanActionBars then return end
+
+	MultiBarBottomLeftButton1:ClearAllPoints()
+	MultiBarBottomLeftButton1:SetPoint("CENTER",-232,0)
+	MultiBarBottomLeftButton1.SetPoint = function() end
 
 	MainMenuBarArtFrame.LeftEndCap:Hide(); 
     MainMenuBarArtFrame.RightEndCap:Hide();

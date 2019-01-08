@@ -156,6 +156,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "HidTrackingBar",
+            parent = Options,
+            label = L.HideTrackingBar,
+            tooltip = L.HideTrackingBarTooltip,
+            var = "HideTrackingBar",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "MapCoords",
             parent = Options,
             label = L.MapCoords,
