@@ -1,0 +1,22 @@
+<Ui>
+    <Script file="functions.lua" />
+    <Script file="localization.lua" />
+    <Script file="options.lua" />
+
+    <Include file="modules\coords.xml" />
+
+    <Script file="core.lua" />
+    <Script file="modules\altbuy.lua" />
+    <Script file="modules\durability.lua" />
+    <Script file="modules\dcp.lua" />
+    <Script file="modules\spellid.lua" />
+    <Script file="modules\ui.lua" />
+    <Script file="modules\vignette.lua" />
+
+    <Frame name="vCore">
+        <Scripts>
+            <OnLoad function="vCore_OnLoad" />
+            <OnEvent function="vCore_OnEvent" />
+        </Scripts>
+    </Frame>
+</Ui>
