@@ -1,0 +1,11 @@
+vCore Changelog
+
+v1.1
+
+*condensed arena tweaks into one variable
+-bugfix functions arenarepair changed to autorepair
+
+
+v1.0
+
+initial release

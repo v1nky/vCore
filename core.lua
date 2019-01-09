@@ -18,9 +18,8 @@ function vCore_OnEvent(self, event, ...)
         local name = ...
         if name == "vCore" then
             vCore:SetDefaultOptions()
-            vCore:AltBuy()
-            vCore:ArenaNumbers()
-            vCore:ArenaDampening()
+			vCore:AltBuy()
+			vCore:ArenaTweaks()
             vCore:AutoRepair()
             vCore:CleanActionBars()
             vCore:DCP()

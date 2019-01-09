@@ -11,9 +11,8 @@ end
 
 function vCore:SetDefaultOptions()
     vCore:RegisterDefaultSetting("AltBuy", true)
-    vCore:RegisterDefaultSetting("ArenaNumbers", true)
-    vCore:RegisterDefaultSetting("ArenaDampening", true)
-    vCore:RegisterDefaultSetting("ArenaRepair", true)
+    vCore:RegisterDefaultSetting("ArenaTweaks", true)
+    vCore:RegisterDefaultSetting("AutoRepair", true)
     vCore:RegisterDefaultSetting("CleanActionBars", false)
     vCore:RegisterDefaultSetting("DCP", true)
     vCore:RegisterDefaultSetting("Durability", true)

@@ -1,29 +1,7 @@
 local _, vCore = ...
 
-function vCore:ArenaNumbers()
-    if not vCoreDB.ArenaNumbers then return end
-
-	--- Arena numbers on Nameplates (Credit to cdew/mes)
-	local U=UnitIsUnit hooksecurefunc("CompactUnitFrame_UpdateName",
-
-		function(F)
-
-			if IsActiveBattlefieldArena()and F.unit:find( "nameplate")then 
-		
-				for i=1,5 do if U( F.unit ,"arena"..i)then F.name:SetText(i)F.name:SetTextColor(1 ,1,0)
-				
-				break 
-				end 
-		
-			end 
-		
-		end 
-		
-	end)
-end
-
-function vCore:ArenaDampening()
-    if not vCoreDB.ArenaDampening then return end
+function vCore:ArenaTweaks()
+    if not vCoreDB.ArenaTweaks then return end
 	-- dampening display in arena
 	-- Credit to pas06
 	local frame = CreateFrame("Frame", nil , UIParent)
@@ -68,6 +46,23 @@ function vCore:ArenaDampening()
 		end
 	end
 
+	--- Arena numbers on Nameplates (Credit to cdew/mes)
+	local U=UnitIsUnit hooksecurefunc("CompactUnitFrame_UpdateName",
+
+		function(F)
+
+			if IsActiveBattlefieldArena()and F.unit:find( "nameplate")then 
+		
+				for i=1,5 do if U( F.unit ,"arena"..i)then F.name:SetText(i)F.name:SetTextColor(1 ,1,0)
+				
+				break 
+				end 
+		
+			end 
+		
+		end 
+		
+	end)
 
 end
 
