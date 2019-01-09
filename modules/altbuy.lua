@@ -8,7 +8,6 @@ function vCore:AltBuy()
     ITEM_VENDOR_STACK_BUY = "|cffa9ff00"..NEW_ITEM_VENDOR_STACK_BUY.."|r"
 
         -- Alt-click to buy a stack.
-
     hooksecurefunc("MerchantItemButton_OnModifiedClick", function(self, ...)
         if not vCoreDB.AltBuy then return end
         if IsAltKeyDown() then
@@ -66,7 +65,6 @@ function vCore:AltBuy()
     end)
 
         -- Add a hint to the tooltip.
-
     local function IsMerchantButtonOver()
         return GetMouseFocus():GetName() and GetMouseFocus():GetName():find("MerchantItem%d")
     end

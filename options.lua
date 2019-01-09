@@ -65,6 +65,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "AltBuy",
+            parent = Options,
+            label = L.AltBuy,
+            tooltip = L.AltBuyTooltip,
+            var = "AltBuy",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "ArenaTweaks",
             parent = Options,
             label = L.ArenaTweaks,

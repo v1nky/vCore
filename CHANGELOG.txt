@@ -1,26 +1,27 @@
 vCore Changelog
 
+v1.5
+
+fixed: auto repair
+
 v1.4
 
-*BUGFIX core.lua referencing autorepair
-+fixed altbuy.lua typo
-
+fixed: core.lua referencing autorepair
+fixed: altbuy.lua typo
 
 v1.3
 
-*BUGFIX altbuy.lua
+fixed: altbuy.lua
 
 v1.2
 
-*Resize Focus Frame and Resize Focus Frame Castbar condensed into one variable
-+ added hide gryphons option
+changed: Resize Focus Frame and Resize Focus Frame Castbar condensed into one variable
+added: hide gryphons option
 
 v1.1
 
-
-*condensed arena tweaks into one variable
--bugfix functions arenarepair changed to autorepair
-
+changed: condensed arena tweaks into one variable
+fixed: functions arenarepair changed to autorepair
 
 v1.0
 
