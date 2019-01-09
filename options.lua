@@ -128,6 +128,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "HideGryphons",
+            parent = Options,
+            label = L.HideGryphons,
+            tooltip = L.HideGryphonsTooltip,
+            var = "HideGryphons",
+			needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "HideNames",
             parent = Options,
             label = L.HideNames,
@@ -168,15 +177,6 @@ Options:SetScript("OnShow", function()
             label = L.ResizeTargetCastBar,
             tooltip = L.ResizeTargetCastBarTooltip,
             var = "ResizeTargetCastBar",
-            needsRestart = true,
-        },  
-        {
-            type = "CheckBox",
-            name = "ResizeFocusCastBar",
-            parent = Options,
-            label = L.ResizeFocusCastBar,
-            tooltip = L.ResizeFocusCastBarTooltip,
-            var = "ResizeFocusCastBar",
             needsRestart = true,
         },  
         {

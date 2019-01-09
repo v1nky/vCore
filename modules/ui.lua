@@ -73,20 +73,6 @@ function vCore:HideBagBar()
     MicroButtonAndBagsBar:Hide() 
 end
 
--- hide names on party / raid frames
-function vCore:HideNames()
-    if not vCoreDB.HideNames then return end
-
-    DefaultCompactUnitFrameOptions.displayName = false
-end
-
--- tracking bar
-function vCore:HideTrackingBar()
-    if not vCoreDB.HideTrackingBar then return end
-
-    StatusTrackingBarManager:Hide()
-end
-
 -- hide binds
 function vCore:HideBinds()
     if not vCoreDB.HideBinds then return end
@@ -103,6 +89,28 @@ function vCore:HideBinds()
 	end
 end
 
+-- hide gryphons
+function vCore:HideGryphons()
+    if not vCoreDB.HideGryphons then return end
+
+	MainMenuBarArtFrame.LeftEndCap:Hide(); 
+    MainMenuBarArtFrame.RightEndCap:Hide();
+end
+
+-- hide names on party / raid frames
+function vCore:HideNames()
+    if not vCoreDB.HideNames then return end
+
+    DefaultCompactUnitFrameOptions.displayName = false
+end
+
+-- tracking bar
+function vCore:HideTrackingBar()
+    if not vCoreDB.HideTrackingBar then return end
+
+    StatusTrackingBarManager:Hide()
+end
+
 -- resize player castbar
 function vCore:ResizePlayerCastBar()
     if not vCoreDB.ResizePlayerCastBar then return end
@@ -117,18 +125,12 @@ function vCore:ResizeTargetCastBar()
     TargetFrameSpellBar:SetScale(1.37)
 end
 
--- resize focus castbar
-function vCore:ResizeFocusCastBar()
-    if not vCoreDB.ResizeFocusCastBar then return end
-
-    FocusFrameSpellBar:SetScale(1.45)
-end
-
--- smaller focus frame
+-- smaller focus frame and larger focus cat bar
 function vCore:ResizeFocus()
     if not vCoreDB.ResizeFocus then return end
 
-    FocusFrame:SetScale(0.9)
+	FocusFrame:SetScale(0.9)
+	FocusFrameSpellBar:SetScale(1.45)
 end
 
 -- extra buttons
@@ -149,9 +151,6 @@ function vCore:CleanActionBars()
 	MultiBarBottomLeftButton1:ClearAllPoints()
 	MultiBarBottomLeftButton1:SetPoint("CENTER",-232,0)
 	MultiBarBottomLeftButton1.SetPoint = function() end
-
-	MainMenuBarArtFrame.LeftEndCap:Hide(); 
-    MainMenuBarArtFrame.RightEndCap:Hide();
     
 	MainMenuBarArtFrameBackground:Hide()
 	ActionBarUpButton:Hide()

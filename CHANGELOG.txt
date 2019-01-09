@@ -1,6 +1,13 @@
 vCore Changelog
 
+
+v1.2
+
+*Resize Focus Frame and Resize Focus Frame Castbar condensed into one variable
++ added hide gryphons option
+
 v1.1
+
 
 *condensed arena tweaks into one variable
 -bugfix functions arenarepair changed to autorepair
