@@ -1,5 +1,10 @@
 vCore Changelog
 
+v1.4
+
+*BUGFIX core.lua referencing autorepair
++fixed altbuy.lua typo
+
 
 v1.3
 

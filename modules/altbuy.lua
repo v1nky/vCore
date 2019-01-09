@@ -8,6 +8,7 @@ function vCore:AltBuy()
     ITEM_VENDOR_STACK_BUY = "|cffa9ff00"..NEW_ITEM_VENDOR_STACK_BUY.."|r"
 
         -- Alt-click to buy a stack.
+
     hooksecurefunc("MerchantItemButton_OnModifiedClick", function(self, ...)
         if not vCoreDB.AltBuy then return end
         if IsAltKeyDown() then
@@ -22,24 +23,6 @@ function vCore:AltBuy()
                 BuyMerchantItem(self:GetID(), GetMerchantItemMaxStack(self:GetID()))
             end
         end
-    end)
-
-        -- Add a hint to the tooltip.
-    local function IsMerchantButtonOver()
-        return GetMouseFocus():GetName() and GetMouseFocus():GetName():find("MerchantItem%d")
-    end
-
-    GameTooltip:HookScript("OnTooltipSetItem", function(self)
-        if not vCoreDB.AltBuy then return end
-        if MerchantFrame:IsShown() and IsMerchantButtonOver() then
-            for i = 2, GameTooltip:NumLines() do
-                if _G["GameTooltipTextLeft"..i]:GetText():find("<[sS]hift") then
-                    GameTooltip:AddLine("|cff00ffcc"..L.AltBuyVendorToolip.."|r")
-                end
-            end
-        end
-    end)
-end
 
         -- auto repair
         local g = CreateFrame("Frame")
@@ -79,4 +62,23 @@ end
                     end
             end
         end)
+
+    end)
+
+        -- Add a hint to the tooltip.
+
+    local function IsMerchantButtonOver()
+        return GetMouseFocus():GetName() and GetMouseFocus():GetName():find("MerchantItem%d")
     end
+
+    GameTooltip:HookScript("OnTooltipSetItem", function(self)
+        if not vCoreDB.AltBuy then return end
+        if MerchantFrame:IsShown() and IsMerchantButtonOver() then
+            for i = 2, GameTooltip:NumLines() do
+                if _G["GameTooltipTextLeft"..i]:GetText():find("<[sS]hift") then
+                    GameTooltip:AddLine("|cff00ffcc"..L.AltBuyVendorToolip.."|r")
+                end
+            end
+        end
+    end)
+end
