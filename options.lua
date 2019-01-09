@@ -65,16 +65,6 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
-            name = "AltBuy",
-            parent = Options,
-            label = L.AltBuy,
-            tooltip = L.AltBuyTooltip,
-            var = "AltBuy",
-            relativeTo = OptionsLabel,
-            offsetY = -12,
-        },
-        {
-            type = "CheckBox",
             name = "ArenaNumbers",
             parent = Options,
             label = L.ArenaNumbers,
@@ -143,7 +133,7 @@ Options:SetScript("OnShow", function()
             label = L.HideBinds,
             tooltip = L.HideBindsTooltip,
             var = "HideBinds",
-            needsRestart = true,
+			needsRestart = true,
         },
         {
             type = "CheckBox",
@@ -156,7 +146,7 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
-            name = "HidTrackingBar",
+            name = "HideTrackingBar",
             parent = Options,
             label = L.HideTrackingBar,
             tooltip = L.HideTrackingBarTooltip,
@@ -207,14 +197,6 @@ Options:SetScript("OnShow", function()
             var = "ResizeFocus",
             needsRestart = true,
         },     
-        {
-            type = "CheckBox",
-            name = "SpellID",
-            parent = Options,
-            label = L.SpellID,
-            tooltip = L.SpellIDTooltip,
-            var = "SpellID",
-        },
         {
             type = "CheckBox",
             name = "VignetteAlert",
