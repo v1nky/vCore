@@ -10,12 +10,12 @@
 * add two additional action buttons to rows 1 & 2
 * ability to hide keybinds
 * Arena Improvements
-    * Arena number to nameplate
-    * Dampening Display
-* Coords to world map
-* auto repair
+    * Adds arena enemy number to nameplate
+    * Dampening display under team status
+* Adds coords to world map
+* auto repair 
 * auto sell junk
-* 
+* Resize Focus frame and focus cast bar 
 * 
 
 ## need help translating into the following:
@@ -25,3 +25,9 @@
 * French
 * Italian
 * Russian
+
+
+## credits
+
+* Neav
+* Drainerx
