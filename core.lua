@@ -167,3 +167,10 @@ end
 local f = CreateFrame("Frame")
 f:SetScript("OnEvent", OnEvent);
 f:RegisterEvent("MERCHANT_SHOW");
+
+-- shortcut for interface options idea credit kickR
+SLASH_vCore1 = "/vc"
+SlashCmdList.vCore = function(msg)
+	InterfaceOptionsFrame_OpenToCategory("vCore")
+	InterfaceOptionsFrame_OpenToCategory("vCore")
+end

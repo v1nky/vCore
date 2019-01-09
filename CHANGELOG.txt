@@ -1,5 +1,9 @@
 vCore Changelog
 
+v1.6
+
+added: shortcut to addon options /vc (idea credit to kickR)
+
 v1.5
 
 fixed: auto repair
