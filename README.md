@@ -1,16 +1,28 @@
 # vCore
-UI enhancement addon for World of Warcraft
+##UI enhancement addon for World of Warcraft
 
-Features:
+#Features:
 
-Hide UI elements (Gryphons, artwork etc)
-Hide BagBar
-Reposistion actionbar 1 & 2
-add two additional action buttons to rows 1 & 2
-ability to hide keybinds
-Arena Improvements
-Coords to world map
-auto repair
-auto sell junk
+##all tweaks can be configured in game via addon menu
 
-need help translating into the following:
+*Hide UI elements (Gryphons, artwork etc)
+*Hide BagBar
+*Reposistion actionbar 1 & 2
+*add two additional action buttons to rows 1 & 2
+*ability to hide keybinds
+*Arena Improvements
+    * Arena number to nameplate
+    * Dampening Display
+*Coords to world map
+*auto repair
+*auto sell junk
+*
+*
+
+##need help translating into the following:
+
+*German
+*Spanish
+*French
+*Italian
+*Russian
