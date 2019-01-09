@@ -1,6 +1,10 @@
 vCore Changelog
 
 
+v1.3
+
+*BUGFIX altbuy.lua
+
 v1.2
 
 *Resize Focus Frame and Resize Focus Frame Castbar condensed into one variable

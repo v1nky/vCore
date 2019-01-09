@@ -31,3 +31,5 @@
 
 * Neav
 * Drainerx
+* Freki (Doom_CooldownPulse)
+* 

@@ -41,11 +41,7 @@ function vCore:AltBuy()
     end)
 end
 
--- auto repair
-
-function vCore:AutoRepair()
-
-    if not vCoreDB.HideBagBar then return end
+        -- auto repair
         local g = CreateFrame("Frame")
         g:RegisterEvent("MERCHANT_SHOW")
         g:SetScript("OnEvent", function()
