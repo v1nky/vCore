@@ -111,18 +111,12 @@ function vCore:HideTrackingBar()
     StatusTrackingBarManager:Hide()
 end
 
--- resize player castbar
-function vCore:ResizePlayerCastBar()
-    if not vCoreDB.ResizePlayerCastBar then return end
+-- resize castbars
+function vCore:ResizeCastBars()
+    if not vCoreDB.ResizeCastBars then return end
 
+	TargetFrameSpellBar:SetScale(1.37)
     CastingBarFrame:SetScale(1.2)
-end
-
--- resize target castbar
-function vCore:ResizeTargetCastBar()
-    if not vCoreDB.ResizeTargetCastBar then return end
-
-    TargetFrameSpellBar:SetScale(1.37)
 end
 
 -- smaller focus frame and larger focus cat bar

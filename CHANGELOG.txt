@@ -1,5 +1,10 @@
 vCore Changelog
 
+v1.7
+
+changed: resize player and target cast bars are now 1 option
+added: option to disable spell ids (credit kickR)
+
 v1.6
 
 added: shortcut to addon options /vc (idea credit to kickR)
