@@ -1,5 +1,15 @@
 vCore Changelog
 
+v1.9
+
+added: slash command /gm (opens help frame)
+added: slash command /cl (clear combat log [clear log])
+added: slash command /rc (ready check)
+added: slash command /cr (check role)
+added: cleaner minimap (remove zoom in out buttons, enables mouse wheel zoom)
+fixed: hide keybinds now also hides macro names
+fixed: various formatting (code and localization)
+
 v1.8
 
 changed: hide gryphons and hidebagbar one option

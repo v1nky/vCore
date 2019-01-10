@@ -1,5 +1,18 @@
 local _, vCore = ...
 
+-- minimap improvements
+MinimapZoomIn:Hide()
+MinimapZoomOut:Hide()
+Minimap:EnableMouseWheel(true)
+Minimap:SetScript('OnMouseWheel', function(self, delta)
+    if delta > 0 then
+        Minimap_ZoomIn()
+    else
+        Minimap_ZoomOut()
+    end
+end)
+
+-- Arena tweaks
 function vCore:ArenaTweaks()
     if not vCoreDB.ArenaTweaks then return end
 	-- dampening display in arena
@@ -66,14 +79,8 @@ function vCore:ArenaTweaks()
 
 end
 
--- hide bagbar
-function vCore:HideBagBar()
-    if not vCoreDB.HideBagBar then return end
 
-    MicroButtonAndBagsBar:Hide() 
-end
-
--- hide binds
+-- hide binds and macro names
 function vCore:HideBinds()
     if not vCoreDB.HideBinds then return end
 
@@ -87,12 +94,25 @@ function vCore:HideBinds()
 			end
 		end
 	end
+
+	local nf = function() end
+	for n,bar in ipairs({"Action", "MultiBarBottomLeft", "MultiBarBottomRight", "MultiBarRight", "MultiBarLeft"}) do
+		for btnnum=1, 12 do
+			local btn = bar.."Button"..btnnum
+			if _G[btn] then
+				_G[btn.."Name"]:Hide()
+				_G[btn.."Name"].Show = nf
+			end
+		end
+	end
+
 end
 
--- hide gryphons
-function vCore:HideGryphons()
-    if not vCoreDB.HideGryphons then return end
+-- hide bagbar and gryphons
+function vCore:HideBagGryphons()
+    if not vCoreDB.HideBagGryphons then return end
 
+	MicroButtonAndBagsBar:Hide() 
 	MainMenuBarArtFrame.LeftEndCap:Hide(); 
     MainMenuBarArtFrame.RightEndCap:Hide();
 end
@@ -117,6 +137,13 @@ function vCore:ResizeCastBars()
 
 	TargetFrameSpellBar:SetScale(1.37)
     CastingBarFrame:SetScale(1.2)
+end
+
+-- elite player
+function vCore:ElitePlayer()
+    if not vCoreDB.ElitePlayer then return end
+
+	PlayerFrameTexture:SetTexture("Interface\\TargetingFrame\\UI-TargetingFrame-Rare-Elite");
 end
 
 -- smaller focus frame and larger focus cat bar
