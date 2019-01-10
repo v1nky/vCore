@@ -1,11 +1,7 @@
 # vCore - UI enhancement addon for World of Warcraft
 
-https://wow.curseforge.com/projects/vcore
+**This addon incorporates various scripts, features and enhancements to World of Warcaft's default user interface.**
 
-https://www.curseforge.com/wow/addons/vcore
- 
-
-* This addon incorporates various scripts, features and enhancements to World of Warcaft's default user interface.
 * All options can be toggled on or off via the in-game addon menu.
 * Type **/vc** in chat to bring up the addon options menu
 * All the options you select are saved and shared across your characters
@@ -33,12 +29,15 @@ https://www.curseforge.com/wow/addons/vcore
 * French
 * Italian
 * Russian
- 
+
+## Links
+
+* https://wow.curseforge.com/projects/vcore
+
+* https://www.curseforge.com/wow/addons/vcore
 
 ## Credits
 * Neav
 * Drainerx
 * Syiana (sgrid)
 * Freki (Doom_CooldownPulse)
-
-
