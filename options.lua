@@ -110,6 +110,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "ElitePlayer",
+            parent = Options,
+            label = L.ElitePlayer,
+            tooltip = L.ElitePlayerTooltip,
+            var = "ElitePlayer",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "ExtraButtons",
             parent = Options,
             label = L.ExtraButtons,
@@ -119,11 +128,11 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
-            name = "HideBagBar",
+            name = "HideBagGryphons",
             parent = Options,
-            label = L.HideBagBar,
-            tooltip = L.HideBagBarTooltip,
-            var = "HideBagBar",
+            label = L.HideBagGryphons,
+            tooltip = L.HideBagGryphonsTooltip,
+            var = "HideBagGryphons",
             needsRestart = true,
         },
         {
@@ -133,15 +142,6 @@ Options:SetScript("OnShow", function()
             label = L.HideBinds,
             tooltip = L.HideBindsTooltip,
             var = "HideBinds",
-			needsRestart = true,
-        },
-        {
-            type = "CheckBox",
-            name = "HideGryphons",
-            parent = Options,
-            label = L.HideGryphons,
-            tooltip = L.HideGryphonsTooltip,
-            var = "HideGryphons",
 			needsRestart = true,
         },
         {

@@ -1,5 +1,10 @@
 vCore Changelog
 
+v1.8
+
+changed: hide gryphons and hidebagbar one option
+added: elite player, adds elite icon around player
+
 v1.7
 
 changed: resize player and target cast bars are now 1 option
