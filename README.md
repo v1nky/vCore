@@ -23,7 +23,7 @@ https://www.curseforge.com/wow/addons/vcore
 * Adds coords to world map
 * auto repair & auto sell junk
 * Resize Focus frame and focus cast bar
-* sgrid (/sgrid 32, 64, 96 or 128) easily align UI elements
+* sgrid **(/sgrid 32, 64, 96 or 128)** easily align UI elements
 * Doom_CooldownPulse - flashes icon on screen when ability is ready
 
 ## I need help translating to the following languages:
