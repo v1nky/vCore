@@ -1,7 +1,7 @@
 # vCore - UI enhancement addon for World of Warcraft
 
-## https://wow.curseforge.com/projects/vcore
-## https://www.curseforge.com/wow/addons/vcore
+https://wow.curseforge.com/projects/vcore
+https://www.curseforge.com/wow/addons/vcore
  
 
 This addon incorporates various scripts, features and enhancements to World of Warcaft's default user interface.
@@ -24,20 +24,21 @@ auto repair & auto sell junk
 Resize Focus frame and focus cast bar
 sgrid (/sgrid 32, 64, 96 or 128) easily align UI elements
 Doom_CooldownPulse - flashes icon on screen when ability is ready
-I need help translating to the following languages:
 
-German
-Spanish
-French
-Italian
-Russian
+## I need help translating to the following languages:
+
+* German
+* Spanish
+* French
+* Italian
+* Russian
  
 
-Credits
-Neav
-Drainerx
-Syiana (sgrid)
-Freki (Doom_CooldownPulse)
+## Credits
+* Neav
+* Drainerx
+* Syiana (sgrid)
+* Freki (Doom_CooldownPulse)
 
 # Features:
 
@@ -57,18 +58,3 @@ Freki (Doom_CooldownPulse)
 * Resize Focus frame and focus cast bar 
 * 
 
-## need help translating into the following:
-
-* German
-* Spanish
-* French
-* Italian
-* Russian
-
-
-## credits
-
-* Neav
-* Drainerx
-* Freki (Doom_CooldownPulse)
-* 
