@@ -22,6 +22,10 @@
 * sgrid **(/sgrid 32, 64, 96 or 128)** easily align UI elements
 * Doom_CooldownPulse - flashes icon on screen when ability is ready
 
+# Screenshots:
+
+![All options enabled](https://media.forgecdn.net/attachments/244/136/wowscrnshot_010919_193410.jpg)
+
 ## I need help translating to the following languages:
 
 * German
