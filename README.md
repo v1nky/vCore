@@ -1,6 +1,7 @@
 # vCore - UI enhancement addon for World of Warcraft
 
 https://wow.curseforge.com/projects/vcore
+
 https://www.curseforge.com/wow/addons/vcore
  
 
@@ -20,10 +21,10 @@ All the options you select are saved and shared across your characters
 * Adds arena enemy number to nameplate
 * Arena Dampening % display under team status
 * Adds coords to world map
-auto repair & auto sell junk
-Resize Focus frame and focus cast bar
-sgrid (/sgrid 32, 64, 96 or 128) easily align UI elements
-Doom_CooldownPulse - flashes icon on screen when ability is ready
+* auto repair & auto sell junk
+* Resize Focus frame and focus cast bar
+* sgrid (/sgrid 32, 64, 96 or 128) easily align UI elements
+* Doom_CooldownPulse - flashes icon on screen when ability is ready
 
 ## I need help translating to the following languages:
 
@@ -40,21 +41,4 @@ Doom_CooldownPulse - flashes icon on screen when ability is ready
 * Syiana (sgrid)
 * Freki (Doom_CooldownPulse)
 
-# Features:
-
-## all tweaks can be configured in game via addon menu
-
-* Hide UI elements (Gryphons, artwork etc)
-* Hide BagBar
-* Reposistion actionbar 1 & 2
-* add two additional action buttons to rows 1 & 2
-* ability to hide keybinds
-* Arena Improvements
-    * Adds arena enemy number to nameplate
-    * Dampening display under team status
-* Adds coords to world map
-* auto repair 
-* auto sell junk
-* Resize Focus frame and focus cast bar 
-* 
 
