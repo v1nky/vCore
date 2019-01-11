@@ -1,7 +1,6 @@
 local _, vCore = ...
 
 -- Forked from rVignette by zork - 2014
-
 function vCore:VignetteAlert()
 
     local addon = CreateFrame("Frame")
@@ -30,7 +29,6 @@ function vCore:VignetteAlert()
         end
     end
 
-    -- Listen for vignette event.
     addon:RegisterEvent("VIGNETTE_MINIMAP_UPDATED")
     addon:SetScript("OnEvent", OnEvent)
 end

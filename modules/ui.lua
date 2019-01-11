@@ -229,3 +229,13 @@ function vCore:CleanActionBars()
 	ActionBarDownButton:Hide()
 	MainMenuBarArtFrame.PageNumber:Hide()
 end
+
+--move and resize buffs
+function vCore:ResizeBuffs()
+    if not vCoreDB.ResizeBuffs then return end
+	hooksecurefunc('BuffFrame_UpdateAllBuffAnchors',function()
+		BuffFrame:ClearAllPoints()
+		BuffFrame:SetPoint("TOPLEFT",Minimap,"TOPRIGHT", -185, 10)
+		BuffFrame:SetScale(1.2)
+	end)
+end

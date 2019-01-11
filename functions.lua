@@ -26,6 +26,7 @@ function vCore:SetDefaultOptions()
     vCore:RegisterDefaultSetting("MapCoords", false)
     vCore:RegisterDefaultSetting("ResizeCastBars", true)
     vCore:RegisterDefaultSetting("ResizeFocus", true)
+    vCore:RegisterDefaultSetting("ResizeBuffs", true)
     vCore:RegisterDefaultSetting("SpellID", true)
     vCore:RegisterDefaultSetting("VignetteAlert", true)
 end

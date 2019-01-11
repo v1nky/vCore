@@ -53,6 +53,7 @@ Options:SetScript("OnShow", function()
     RightSide:SetPoint("TOPRIGHT", Options)
 
     local UIControls = {
+        -- Left Side
         {
             type = "Label",
             name = "OptionsLabel",
@@ -71,6 +72,60 @@ Options:SetScript("OnShow", function()
             tooltip = L.AltBuyTooltip,
             var = "AltBuy",
             needsRestart = true,
+        },
+        {
+            type = "CheckBox",
+            name = "DCP",
+            parent = Options,
+            label = L.DCP,
+            tooltip = L.DCPTooltip,
+            var = "DCP",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
+            name = "Durability",
+            parent = Options,
+            label = L.Durability,
+            tooltip = L.DurabilityTooltip,
+            var = "Durability",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
+            name = "MapCoords",
+            parent = Options,
+            label = L.MapCoords,
+            tooltip = L.MapCoordsTooltip,
+            var = "MapCoords",
+        },
+        {
+            type = "CheckBox",
+            name = "SpellID",
+            parent = Options,
+            label = L.SpellID,
+            tooltip = L.SpellIDTooltip,
+            var = "SpellID",
+            needsRestart = true,
+        },   
+        {
+            type = "CheckBox",
+            name = "VignetteAlert",
+            parent = Options,
+            label = L.VignetteAlert,
+            tooltip = L.VignetteAlertTooltip,
+            var = "VignetteAlert",
+        },
+        -- Right Side
+        {
+            type = "Label",
+            name = "OptionsLabel2",
+            parent = Options,
+            label = L.OptionsLabel2,
+            relativeTo = RightSide,
+            relativePoint = "TOPLEFT",
+            offsetX = 16,
+            offsetY = -16,
         },
         {
             type = "CheckBox",
@@ -97,24 +152,6 @@ Options:SetScript("OnShow", function()
             label = L.CleanActionBars,
             tooltip = L.CleanActionBarsTooltip,
             var = "CleanActionBars",
-            needsRestart = true,
-        },
-        {
-            type = "CheckBox",
-            name = "DCP",
-            parent = Options,
-            label = L.DCP,
-            tooltip = L.DCPTooltip,
-            var = "DCP",
-            needsRestart = true,
-        },
-        {
-            type = "CheckBox",
-            name = "Durability",
-            parent = Options,
-            label = L.Durability,
-            tooltip = L.DurabilityTooltip,
-            var = "Durability",
             needsRestart = true,
         },
         {
@@ -173,11 +210,12 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
-            name = "MapCoords",
+            name = "ResizeBuffs",
             parent = Options,
-            label = L.MapCoords,
-            tooltip = L.MapCoordsTooltip,
-            var = "MapCoords",
+            label = L.ResizeBuffs,
+            tooltip = L.ResizeBuffsTooltip,
+            var = "ResizeBuffs",
+            needsRestart = true,
         },
         {
             type = "CheckBox",
@@ -196,24 +234,7 @@ Options:SetScript("OnShow", function()
             tooltip = L.ResizeFocusTooltip,
             var = "ResizeFocus",
             needsRestart = true,
-        },  
-        {
-            type = "CheckBox",
-            name = "SpellID",
-            parent = Options,
-            label = L.SpellID,
-            tooltip = L.SpellIDTooltip,
-            var = "SpellID",
-            needsRestart = true,
-        },   
-        {
-            type = "CheckBox",
-            name = "VignetteAlert",
-            parent = Options,
-            label = L.VignetteAlert,
-            tooltip = L.VignetteAlertTooltip,
-            var = "VignetteAlert",
-        }
+        }, 
     }
 
     for i, control in pairs(UIControls) do

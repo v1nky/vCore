@@ -13,7 +13,8 @@ end })
 -- English
 ------------------------------------------------------------------------
 
-L.OptionsLabel = "Options"
+L.OptionsLabel = "Features"
+L.OptionsLabel2 = "UI Enhancements"
 L.AltBuy = "Alt Buy"
 L.AltBuyTooltip = "Hold the alt key to buy a stack of an item."
 L.AltBuyVendorToolip = "<Alt-click, to buy an stack>"
@@ -42,6 +43,8 @@ L.HideTrackingBar = "Hide Tracking Bar"
 L.HideTrackingBarTooltip = "Hides the xp and artifact bar from your UI"
 L.MapCoords = "Map Coords"
 L.MapCoordsTooltip = "Adds player and cursor location to the world map."
+L.ResizeBuffs = "Resize Buffs and Debuffs"
+L.ResizeBuffsTooltip = "Resizes your buffs and debuffs to 1:2"
 L.ResizeCastBars = "Resize Castbars"
 L.ResizeCastBarsTooltip = "makes your and your targets cast bar bigger"
 L.ResizeFocus = "Resize Focus Frame"

@@ -1,5 +1,11 @@
 vCore Changelog
 
+v2.3
+
+added: resizebuffs (requested by kickR)
+changed: options menu to two groups features and UI Enhancements
+changed: options menu is now in alphabetical order
+
 v2.2
 
 fixed: ui.lua minimap tracking icon position clashing with new mail icon (thanks again Craig)
