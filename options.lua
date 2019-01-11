@@ -83,6 +83,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "ClassColourNames",
+            parent = Options,
+            label = L.ClassColourNames,
+            tooltip = L.ClassColourNamesTooltip,
+            var = "ClassColourNames",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "CleanActionBars",
             parent = Options,
             label = L.CleanActionBars,
