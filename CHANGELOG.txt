@@ -1,5 +1,9 @@
 vCore Changelog
 
+v2.1
+
+fixed: altbuy.lua error when hovering over item (thanks Craig)
+
 v2.0
 
 moved: minimap tracking button
