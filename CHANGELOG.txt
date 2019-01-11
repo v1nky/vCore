@@ -1,5 +1,9 @@
 vCore Changelog
 
+v2.2
+
+fixed: ui.lua minimap tracking icon position clashing with new mail icon (thanks again Craig)
+
 v2.1
 
 fixed: altbuy.lua error when hovering over item (thanks Craig)

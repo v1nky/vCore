@@ -12,7 +12,7 @@ Minimap:SetScript('OnMouseWheel', function(self, delta)
     end
 end)
 MiniMapTracking:ClearAllPoints()
-MiniMapTracking:SetPoint("TOPRIGHT", 0, -37)
+MiniMapTracking:SetPoint("TOPRIGHT", -26, 7)
 
 -- class colour names
 function vCore:ClassColourNames()
