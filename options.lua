@@ -75,6 +75,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "ClearFont",
+            parent = Options,
+            label = L.ClearFont,
+            tooltip = L.ClearFontTooltip,
+            var = "ClearFont",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "DCP",
             parent = Options,
             label = L.DCP,
