@@ -240,3 +240,9 @@ function vCore:ResizeBuffs()
 		BuffFrame:SetScale(1.2)
 	end)
 end
+
+--testing
+local nfns, font, size = NumberFontNormalSmall
+font, size = NumberFontNormalSmall:GetFont()
+nfns:SetFont(font, 14,'OUTLINE')
+nfns:SetShadowColor(0, 0, 0, 0)
