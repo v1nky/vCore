@@ -1,5 +1,10 @@
 vCore Changelog
 
+v2.4
+
+fixed: hidetracking bar also sets cvar showHonorAsExperience to 1
+added: option to add clearfont to your actionbars
+
 v2.3
 
 added: resizebuffs (requested by kickR)
