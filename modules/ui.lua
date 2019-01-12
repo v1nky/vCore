@@ -177,8 +177,9 @@ end
 
 -- tracking bar
 function vCore:HideTrackingBar()
-    if not vCoreDB.HideTrackingBar then return end
-
+    if not vCoreDB.HideTrackingBar then SetCVar("showHonorAsExperience", 0) return end
+	-- fix if hiding tracking bar (credit to Draane)
+	SetCVar("showHonorAsExperience", 1) 
     StatusTrackingBarManager:Hide()
 end
 
