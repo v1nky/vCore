@@ -21,7 +21,7 @@ function vCore_OnEvent(self, event, ...)
 			vCore:ArenaTweaks()
 			vCore:ClassColourNames()
 			vCore:CleanActionBars()
-			vCore:ClearFont
+			vCore:ClearFont()
             vCore:DCP()
 			vCore:Durability()
 			vCore:ElitePlayer()

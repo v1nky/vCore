@@ -247,5 +247,4 @@ function vCore:ClearFont()
 		font, size = NumberFontNormalSmall:GetFont()
 		nfns:SetFont(font, 14,'OUTLINE')
 		nfns:SetShadowColor(0, 0, 0, 0)
-	end)
 end

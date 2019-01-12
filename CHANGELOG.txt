@@ -2,8 +2,8 @@ vCore Changelog
 
 v2.4
 
-fixed: hidetracking bar also sets cvar showHonorAsExperience to 1
-added: option to add clearfont to your actionbars
+fixed: hidetracking bar also sets cvar showHonorAsExperience to 1 (credit Draane)
+added: option to add clearfont to your actionbars (credit Draane)
 
 v2.3
 
