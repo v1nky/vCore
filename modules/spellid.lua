@@ -45,8 +45,6 @@ function vCore:SpellID()
         if not vCoreDB.SpellID then return end
         local id = select(2, self:GetSpell())
         if id then
-            -- Workaround for weird issue when this gets triggered twice on the Talents frame
-            -- https://github.com/renstrom/NeavUI/issues/76
             for i = 1, self:NumLines() do
                 if _G["GameTooltipTextLeft"..i]:GetText() == "SpellID: "..id then
                     return
