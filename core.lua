@@ -12,7 +12,8 @@ end
 
 function vCore_OnEvent(self, event, ...)
     if event == "PLAYER_LOGIN" then
-        SetCVar("ScreenshotQuality", 10)
+		SetCVar("ScreenshotQuality", 10)
+		SetCVar("floatingCombatTextCombatState", 1)
     elseif event == "ADDON_LOADED" then
         local name = ...
         if name == "vCore" then
