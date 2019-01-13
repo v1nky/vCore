@@ -14,7 +14,6 @@ function vCore:AltBuy()
 
             local numAvailable = select(5, GetMerchantItemInfo(self:GetID()))
 
-            -- -1 means an item has unlimited supply.
             if numAvailable ~= -1 then
                 BuyMerchantItem(self:GetID(), numAvailable)
             else

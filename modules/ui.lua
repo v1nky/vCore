@@ -248,3 +248,8 @@ function vCore:ClearFont()
 		nfns:SetFont(font, 14,'OUTLINE')
 		nfns:SetShadowColor(0, 0, 0, 0)
 end
+
+-- testing
+
+-- hides player name
+PlayerName:SetAlpha(0);
