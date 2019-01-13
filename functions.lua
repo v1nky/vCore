@@ -55,19 +55,6 @@ end
 local prevControl
 
 function vCore:CreateLabel(cfg)
-    --[[
-        {
-            type = "Label",
-            name = "LabelName",
-            parent = Options,
-            label = L.LabelText,
-            fontObject = "GameFontNormalLarge",
-            relativeTo = LeftSide,
-            relativePoint = "TOPLEFT",
-            offsetX = 16,
-            offsetY = -16,
-        },
-    --]]
     cfg.initialPoint = cfg.initialPoint or "TOPLEFT"
     cfg.relativePoint = cfg.relativePoint or "BOTTOMLEFT"
     cfg.offsetX = cfg.offsetX or 0
@@ -84,27 +71,6 @@ function vCore:CreateLabel(cfg)
 end
 
 function vCore:CreateCheckBox(cfg)
-    --[[
-        {
-            type = "CheckBox",
-            name = "Test",
-            parent = parent,
-            label = L.TestLabel,
-            tooltip = L.TestTooltip,
-            isCvar = nil or True,
-            var = "TestVar",
-            needsRestart = nil or True,
-            disableInCombat = nil or True,
-            func = function(self)
-                -- Do stuff here.
-            end,
-            initialPoint = "TOPLEFT",
-            relativeTo = frame,
-            relativePoint, "BOTTOMLEFT",
-            offsetX = 0,
-            offsetY = -6,
-        },
-    --]]
     cfg.initialPoint = cfg.initialPoint or "TOPLEFT"
     cfg.relativePoint = cfg.relativePoint or "BOTTOMLEFT"
     cfg.offsetX = cfg.offsetX or 0
