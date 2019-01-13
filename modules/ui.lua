@@ -173,12 +173,15 @@ function vCore:HideNames()
     DefaultCompactUnitFrameOptions.displayName = false
 end
 
--- tracking bar
+-- tracking  (honorbar fix)
 function vCore:HideTrackingBar()
-    if not vCoreDB.HideTrackingBar then SetCVar("showHonorAsExperience", 0) return end
-	-- fix if hiding tracking bar (credit to Draane)
-	SetCVar("showHonorAsExperience", 1) 
-    StatusTrackingBarManager:Hide()
+	if not vCoreDB.HideTrackingBar then 
+		SetCVar("showHonorAsExperience", 0) 
+	else
+		-- fix if hiding tracking bar (credit to Draane)
+		SetCVar("showHonorAsExperience", 1) 
+		StatusTrackingBarManager:Hide()
+	end
 end
 
 -- resize castbars
