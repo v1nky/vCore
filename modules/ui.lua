@@ -175,13 +175,10 @@ end
 
 -- tracking  (honorbar fix)
 function vCore:HideTrackingBar()
-	if not vCoreDB.HideTrackingBar then 
-		SetCVar("showHonorAsExperience", 0) 
-	else
+	if not vCoreDB.HideTrackingBar then return end
 		-- fix if hiding tracking bar (credit to Draane)
 		SetCVar("showHonorAsExperience", 1) 
 		StatusTrackingBarManager:Hide()
-	end
 end
 
 -- resize castbars
