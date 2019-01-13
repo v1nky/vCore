@@ -1,3 +1,4 @@
+-- credit to Neal (NeavUI)
 local _, vCore = ...
 
 function vCore:AltBuy()
