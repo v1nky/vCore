@@ -1,3 +1,4 @@
+-- Doom_Cooldown Pulse credit
 local _, vCore = ...
 
 function vCore:DCP()
