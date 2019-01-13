@@ -1,6 +1,6 @@
+-- credit to Neal (NeavUI forked from rVignette by zork - 2014)
 local _, vCore = ...
 
--- Forked from rVignette by zork - 2014
 function vCore:VignetteAlert()
 
     local addon = CreateFrame("Frame")
