@@ -44,9 +44,6 @@ DCP.TextFrame:SetTextColor(1,1,1)
 local DCPT = DCP:CreateTexture(nil,"BACKGROUND")
 DCPT:SetAllPoints(DCP)
 
------------------------
--- Utility Functions --
------------------------
 local function tcount(tab)
     local n = 0
     for _ in pairs(tab) do
@@ -79,9 +76,6 @@ local function RefreshLocals()
     end
 end
 
---------------------------
--- Cooldown / Animation --
---------------------------
 local elapsed = 0
 local runtimer = 0
 local function OnUpdate(_,update)
@@ -166,9 +160,6 @@ local function OnUpdate(_,update)
     end
 end
 
---------------------
--- Event Handlers --
---------------------
 function DCP:ADDON_LOADED(addon)
     if (not DCP_Saved) then
         DCP_Saved = defaultsettings
@@ -248,10 +239,6 @@ hooksecurefunc("UseContainerItem", function(bag,slot)
         watching[itemID] = {GetTime(),"item",texture}
     end
 end)
-
--------------------
--- Options Frame --
--------------------
 
 SlashCmdList["DOOMCOOLDOWNPULSE"] = function() if (not DCP_OptionsFrame) then DCP:CreateOptionsFrame() end DCP_OptionsFrame:Show() end
 SLASH_DOOMCOOLDOWNPULSE1 = "/dcp"
