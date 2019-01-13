@@ -129,7 +129,6 @@ function vCore:ArenaTweaks()
 
 end
 
-
 -- hide binds and macro names
 function vCore:HideBinds()
     if not vCoreDB.HideBinds then return end
