@@ -66,8 +66,7 @@ end
 -- Arena tweaks
 function vCore:ArenaTweaks()
     if not vCoreDB.ArenaTweaks then return end
-	-- dampening display in arena
-	-- Credit to pas06
+	-- dampening display in arena (credit to pas06)
 	local frame = CreateFrame("Frame", nil , UIParent)
 	local _
 	local FindAuraByName = AuraUtil.FindAuraByName
@@ -77,7 +76,7 @@ function vCore:ArenaTweaks()
 	frame:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
 	frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 	frame:SetPoint("TOP", UIWidgetTopCenterContainerFrame, "BOTTOM", 0, 0)
-	frame:SetSize(200, 11.38) --11,38 is the height of the remaining time
+	frame:SetSize(200, 11.38)
 	frame.text = frame:CreateFontString(nil, "BACKGROUND")
 	frame.text:SetFontObject(GameFontNormalSmall)
 	frame.text:SetAllPoints()
