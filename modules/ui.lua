@@ -179,16 +179,8 @@ end
 
 -- tracking bar
 function vCore:HideTrackingBar()
-	if not vCoreDB.HideTrackingBar then
-		-- fix if not hiding tracking bar (issue #2)
-		if event == "PLAYER_ENTERING_WORLD" then
-			SetCVar("showHonorAsExperience", 0);
-		end
-	else
-		-- fix if hiding tracking bar (credit to Draane)
-		SetCVar("showHonorAsExperience", 1);
+	if not vCoreDB.HideTrackingBar then return end
 		StatusTrackingBarManager:Hide()
-	end
 end
 
 -- resize castbars
