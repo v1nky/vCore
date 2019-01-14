@@ -2,7 +2,7 @@ vCore Changelog
 
 v2.5
 
-fixed: if hidetracking bar option is not enabled then xp bar is correctly shown.
+reverted: set cvar showHonorAsExperience if trackingbar is hidden - must be manually selected from the honor page (right click honor level and tick box)
 added: option to hide playername
 
 v2.4
