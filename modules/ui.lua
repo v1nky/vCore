@@ -160,17 +160,21 @@ end
 -- hide bagbar and gryphons
 function vCore:HideBagGryphons()
     if not vCoreDB.HideBagGryphons then return end
-
-	MicroButtonAndBagsBar:Hide() 
-	MainMenuBarArtFrame.LeftEndCap:Hide(); 
-    MainMenuBarArtFrame.RightEndCap:Hide();
+		MicroButtonAndBagsBar:Hide() 
+		MainMenuBarArtFrame.LeftEndCap:Hide(); 
+		MainMenuBarArtFrame.RightEndCap:Hide();
 end
 
 -- hide names on party / raid frames
 function vCore:HideNames()
     if not vCoreDB.HideNames then return end
+    	DefaultCompactUnitFrameOptions.displayName = false
+end
 
-    DefaultCompactUnitFrameOptions.displayName = false
+-- hide player name (added v2.5)
+function vCore:HidePlayerName()
+	if not vCoreDB.HidePlayerName then return end
+		PlayerName:SetAlpha(0);
 end
 
 -- tracking bar
@@ -190,49 +194,42 @@ end
 -- resize castbars
 function vCore:ResizeCastBars()
     if not vCoreDB.ResizeCastBars then return end
-
-	TargetFrameSpellBar:SetScale(1.37)
-    CastingBarFrame:SetScale(1.2)
+		TargetFrameSpellBar:SetScale(1.37)
+    	CastingBarFrame:SetScale(1.2)
 end
 
 -- elite player
 function vCore:ElitePlayer()
     if not vCoreDB.ElitePlayer then return end
-
-	PlayerFrameTexture:SetTexture("Interface\\TargetingFrame\\UI-TargetingFrame-Rare-Elite");
+		PlayerFrameTexture:SetTexture("Interface\\TargetingFrame\\UI-TargetingFrame-Rare-Elite");
 end
 
 -- smaller focus frame and larger focus cat bar
 function vCore:ResizeFocus()
     if not vCoreDB.ResizeFocus then return end
-
-	FocusFrame:SetScale(0.9)
-	FocusFrameSpellBar:SetScale(1.45)
+		FocusFrame:SetScale(0.9)
+		FocusFrameSpellBar:SetScale(1.45)
 end
 
 -- extra buttons
 function vCore:ExtraButtons()
     if not vCoreDB.ExtraButtons then return end
-
-	MultiBarLeftButton12:ClearAllPoints()
-	MultiBarLeftButton12:SetPoint("LEFT", MultiBarBottomLeftButton12, "RIGHT", 6, 0) MultiBarLeftButton12.SetPoint = function() end
-	
-	MultiBarLeftButton11:ClearAllPoints()
-	MultiBarLeftButton11:SetPoint("LEFT", ActionButton12, "RIGHT", 6, 0) MultiBarLeftButton11.SetPoint = function() end
+		MultiBarLeftButton12:ClearAllPoints()
+		MultiBarLeftButton12:SetPoint("LEFT", MultiBarBottomLeftButton12, "RIGHT", 6, 0) MultiBarLeftButton12.SetPoint = function() end
+		MultiBarLeftButton11:ClearAllPoints()
+		MultiBarLeftButton11:SetPoint("LEFT", ActionButton12, "RIGHT", 6, 0) MultiBarLeftButton11.SetPoint = function() end
 end
 
 -- clean action bars
 function vCore:CleanActionBars()
     if not vCoreDB.CleanActionBars then return end
-
-	MultiBarBottomLeftButton1:ClearAllPoints()
-	MultiBarBottomLeftButton1:SetPoint("CENTER",-232,0)
-	MultiBarBottomLeftButton1.SetPoint = function() end
-    
-	MainMenuBarArtFrameBackground:Hide()
-	ActionBarUpButton:Hide()
-	ActionBarDownButton:Hide()
-	MainMenuBarArtFrame.PageNumber:Hide()
+		MultiBarBottomLeftButton1:ClearAllPoints()
+		MultiBarBottomLeftButton1:SetPoint("CENTER",-232,0)
+		MultiBarBottomLeftButton1.SetPoint = function() end
+		MainMenuBarArtFrameBackground:Hide()
+		ActionBarUpButton:Hide()
+		ActionBarDownButton:Hide()
+		MainMenuBarArtFrame.PageNumber:Hide()
 end
 
 --move and resize buffs
@@ -252,8 +249,3 @@ function vCore:ClearFont()
 		nfns:SetFont(font, 14,'OUTLINE')
 		nfns:SetShadowColor(0, 0, 0, 0)
 end
-
--- testing
-
--- hides player name
-PlayerName:SetAlpha(0);
