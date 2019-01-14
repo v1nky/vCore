@@ -210,6 +210,15 @@ Options:SetScript("OnShow", function()
         },
         {
             type = "CheckBox",
+            name = "HidePlayerName",
+            parent = Options,
+            label = L.HidePlayerName,
+            tooltip = L.HidePlayerNameTooltip,
+            var = "HidePlayerName",
+            needsRestart = true,
+        },
+        {
+            type = "CheckBox",
             name = "HideTrackingBar",
             parent = Options,
             label = L.HideTrackingBar,
