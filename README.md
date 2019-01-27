@@ -14,8 +14,8 @@
 * moves two buttons to rows 1 & 2 from Right ActionBar 2 Button's 11&12
 * ability to hide keybinds
 * Arena Improvements
-* Adds arena enemy number to nameplate
-* Arena Dampening % display under team status
+  * Adds arena enemy number to nameplate
+  * Arena Dampening % display under team status
 * Adds coords to world map
 * auto repair & auto sell junk
 * Resize Focus frame and focus cast bar
