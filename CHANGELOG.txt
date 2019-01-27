@@ -1,5 +1,10 @@
 vCore Changelog
 
+v2.6 (requested)
+
+changed: hide macro names and hide keybinds seperate options
+changed: hide gryphon bar and hide bag bar seperate options
+
 v2.5
 
 reverted: set cvar showHonorAsExperience if trackingbar is hidden - must be manually selected from the honor page (right click honor level and tick box)

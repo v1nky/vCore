@@ -129,7 +129,7 @@ function vCore:ArenaTweaks()
 
 end
 
--- hide binds and macro names
+-- hide key binds
 function vCore:HideBinds()
     if not vCoreDB.HideBinds then return end
 
@@ -143,6 +143,11 @@ function vCore:HideBinds()
 			end
 		end
 	end
+end
+
+-- hide macro names
+function vCore:HideMacroNames()
+    if not vCoreDB.HideMacroNames then return end
 
 	local nf = function() end
 	for n,bar in ipairs({"Action", "MultiBarBottomLeft", "MultiBarBottomRight", "MultiBarRight", "MultiBarLeft"}) do
@@ -158,9 +163,14 @@ function vCore:HideBinds()
 end
 
 -- hide bagbar and gryphons
-function vCore:HideBagGryphons()
-    if not vCoreDB.HideBagGryphons then return end
+function vCore:HideBagBar()
+    if not vCoreDB.HideBagBar then return end
 		MicroButtonAndBagsBar:Hide() 
+end
+
+-- hide gryphons
+function vCore:HideGryphons()
+    if not vCoreDB.HideGryphons then return end
 		MainMenuBarArtFrame.LeftEndCap:Hide(); 
 		MainMenuBarArtFrame.RightEndCap:Hide();
 end
