@@ -1,0 +1,12 @@
+v2.7
+
+updated: Toc updated to patch 8.2
+bugfix: sound file for DCP reference removed
+changed: extra buttons now uses MultiBarLeftButton11 and MultiBarLeftButton12
+updated: localization for extra button tooltip changes
+
+
+v2.6 (requested)
+
+changed: hide macro names and hide keybinds separate options
+changed: hide gryphon bar and hide bag bar separate options
