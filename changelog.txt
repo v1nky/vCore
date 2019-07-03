@@ -1,3 +1,12 @@
+v2.8
+
+changed: hide names now hides player name and raid frame names.
+added: player cast bar icon
+changed: focus frame option now places focus cast bar in center of screen
+changed: re-positioned clean action bar if tracking bar is hidden
+added: hide stance bar (stealth button, druid forms)
+changed: clean action bars now also moves and scales pet action bar
+
 v2.7
 
 updated: Toc updated to patch 8.2

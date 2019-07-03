@@ -264,6 +264,15 @@ Options:SetScript("OnShow", function()
         },  
         {
             type = "CheckBox",
+            name = "CastBarIcon",
+            parent = Options,
+            label = L.CastBarIcon,
+            tooltip = L.CastBarIconTooltip,
+            var = "CastBarIcon",
+            needsRestart = true,
+        },  
+        {
+            type = "CheckBox",
             name = "ResizeFocus",
             parent = Options,
             label = L.ResizeFocus,

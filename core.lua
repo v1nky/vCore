@@ -20,6 +20,7 @@ function vCore_OnEvent(self, event, ...)
             vCore:SetDefaultOptions()
 			vCore:AltBuy()
 			vCore:ArenaTweaks()
+			vCore:CastBarIcon()
 			vCore:ClassColourNames()
 			vCore:CleanActionBars()
 			vCore:ClearFont()
@@ -32,7 +33,7 @@ function vCore_OnEvent(self, event, ...)
 			vCore:HideGryphons()
 			vCore:HideMacroNames()
 			vCore:HideNames()
-			vCore:HidePlayerName()
+			vCore:HideStanceBar()
             vCore:HideTrackingBar()
 			vCore:MapCoords()
 			vCore:ResizeBuffs()
@@ -178,3 +179,27 @@ SlashCmdList.vCore = function(msg)
 	InterfaceOptionsFrame_OpenToCategory("vCore")
 	InterfaceOptionsFrame_OpenToCategory("vCore")
 end
+
+----------------------------------------------------------------------------------------
+--	Skip cinematics/movies(CinematicSkip by Pigmonkey)
+----------------------------------------------------------------------------------------
+-- Cancel cinematics after they start
+--local frame = CreateFrame("Frame")
+--frame:RegisterEvent("CINEMATIC_START")
+--frame:SetScript("OnEvent", function(_, event)
+--	if event == "CINEMATIC_START" then
+--		if not IsControlKeyDown() then
+--			CinematicFrame_CancelCinematic()
+--		end
+--	end
+--end)
+
+-- Hook movies and stop them before they get called
+--local PlayMovie_hook = MovieFrame_PlayMovie
+--MovieFrame_PlayMovie = function(...)
+--	if IsControlKeyDown() then
+--		PlayMovie_hook(...)
+--	else
+--		GameMovieFinished()
+--	end
+--end

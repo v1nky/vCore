@@ -1,8 +1,8 @@
-## Interface: 80200
+## Interface: 80100
 ## Title: vCore
 ## SavedVariables: vCoreDB
 ## Notes: UI Enhancements by v1nk.
 ## Author: v1nk
-## Version: 2.7
+## Version: 2.8
 
 vCore.xml

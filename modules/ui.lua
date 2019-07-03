@@ -162,7 +162,7 @@ function vCore:HideMacroNames()
 
 end
 
--- hide bagbar and gryphons
+-- hide bagbar
 function vCore:HideBagBar()
     if not vCoreDB.HideBagBar then return end
 		MicroButtonAndBagsBar:Hide() 
@@ -178,13 +178,14 @@ end
 -- hide names on party / raid frames
 function vCore:HideNames()
     if not vCoreDB.HideNames then return end
-    	DefaultCompactUnitFrameOptions.displayName = false
+		DefaultCompactUnitFrameOptions.displayName = false
+		PlayerName:SetAlpha(0);
 end
 
 -- hide player name (added v2.5)
-function vCore:HidePlayerName()
-	if not vCoreDB.HidePlayerName then return end
-		PlayerName:SetAlpha(0);
+function vCore:HideStanceBar()
+	if not vCoreDB.HideStanceBar then return end
+		StanceBarFrame:SetScript("OnUpdate", function(self) self:Hide() end)
 end
 
 -- tracking bar
@@ -206,11 +207,14 @@ function vCore:ElitePlayer()
 		PlayerFrameTexture:SetTexture("Interface\\TargetingFrame\\UI-TargetingFrame-Rare-Elite");
 end
 
--- smaller focus frame and larger focus cat bar
+-- smaller focus frame and larger focus cat bar and castbar in center
 function vCore:ResizeFocus()
     if not vCoreDB.ResizeFocus then return end
-		FocusFrame:SetScale(0.9)
-		FocusFrameSpellBar:SetScale(1.45)
+		FocusFrame:SetScale(0.8)
+		FocusFrameSpellBar:SetScale(2)
+		FocusFrameSpellBar:ClearAllPoints()
+        FocusFrameSpellBar:SetPoint("CENTER", UIParent, "CENTER", 0, 100)
+        FocusFrameSpellBar.SetPoint = function() end
 end
 
 -- extra buttons
@@ -225,6 +229,8 @@ end
 -- clean action bars
 function vCore:CleanActionBars()
     if not vCoreDB.CleanActionBars then return end
+	
+	if not vCoreDB.HideTrackingBar then
 		MultiBarBottomLeftButton1:ClearAllPoints()
 		MultiBarBottomLeftButton1:SetPoint("CENTER",-232,0)
 		MultiBarBottomLeftButton1.SetPoint = function() end
@@ -232,6 +238,23 @@ function vCore:CleanActionBars()
 		ActionBarUpButton:Hide()
 		ActionBarDownButton:Hide()
 		MainMenuBarArtFrame.PageNumber:Hide()
+	else
+		ActionButton1:ClearAllPoints()
+		ActionButton1:SetPoint("CENTER",-233,-29)
+		ActionButton1.SetPoint = function() end
+		MultiBarBottomLeftButton1:ClearAllPoints()
+		MultiBarBottomLeftButton1:SetPoint("CENTER",-232,-11)
+		MultiBarBottomLeftButton1.SetPoint = function() end
+		MainMenuBarArtFrameBackground:Hide()
+		ActionBarUpButton:Hide()
+		ActionBarDownButton:Hide()
+		MainMenuBarArtFrame.PageNumber:Hide()
+		PetActionBarFrame:ClearAllPoints()
+		PetActionBarFrame:SetScale(0.8)
+		PetActionBarFrame:SetPoint("TOP", MultiBarBottomLeftButton12, "RIGHT", -250, 72)
+		PetActionBarFrame.SetPoint=function()end
+	end
+	
 end
 
 --move and resize buffs
@@ -243,6 +266,7 @@ function vCore:ResizeBuffs()
 		BuffFrame:SetScale(1.2)
 	end)
 end
+
 --clearfont (credit Draane)
 function vCore:ClearFont()
     if not vCoreDB.ClearFont then return end
@@ -251,3 +275,86 @@ function vCore:ClearFont()
 		nfns:SetFont(font, 14,'OUTLINE')
 		nfns:SetShadowColor(0, 0, 0, 0)
 end
+
+--Player Castbar Icon
+function vCore:CastBarIcon()
+	if not vCoreDB.CastBarIcon then return end
+		local CastBars = CreateFrame("Frame", nil, UIParent)
+
+		CastBars:RegisterEvent("ADDON_LOADED")
+		CastBars:RegisterEvent("PLAYER_ENTERING_WORLD")
+		CastBars:SetScript("OnEvent",function(self, event, addon)
+				if addon == "vCore" or event == "PLAYER_ENTERING_WORLD" then
+
+					if not InCombatLockdown() then
+						--CastingBarFrame:SetScale(1.)
+						CastingBarFrame.Icon:Show()
+						CastingBarFrame.Icon:ClearAllPoints()
+						CastingBarFrame.Icon:SetSize(20, 20)
+						CastingBarFrame.Icon:SetPoint("RIGHT", CastingBarFrame, "LEFT", -5, 0)
+						CastingBarFrame.Border:SetTexture("Interface\\CastingBar\\UI-CastingBar-Border-Small")
+						CastingBarFrame.Flash:SetTexture("Interface\\CastingBar\\UI-CastingBar-Flash-Small")
+						CastingBarFrame.Text:ClearAllPoints()
+						CastingBarFrame.Text:SetPoint("CENTER", 0, 1)
+						CastingBarFrame.Border:SetWidth(CastingBarFrame.Border:GetWidth() + 4)
+						CastingBarFrame.Flash:SetWidth(CastingBarFrame.Flash:GetWidth() + 4)
+						CastingBarFrame.BorderShield:SetWidth(CastingBarFrame.BorderShield:GetWidth() + 4)
+						CastingBarFrame.Border:SetPoint("TOP", 0, 26)
+						CastingBarFrame.Flash:SetPoint("TOP", 0, 26)
+						CastingBarFrame.BorderShield:SetPoint("TOP", 0, 26)
+
+						self:UnregisterEvent("ADDON_LOADED")
+						self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+					end
+				end
+			end
+		)
+end
+
+--testing 8.2
+local CF=CreateFrame("Frame")
+CF:RegisterEvent("PLAYER_LOGIN")
+CF:SetScript("OnEvent", function(self, event)
+
+CharacterMicroButton:ClearAllPoints()
+CharacterMicroButton:SetPoint('BOTTOMLEFT', MicroButtonAndBagsBar, "BOTTOMLEFT", 6, 3)
+MicroButtonAndBagsBar:Hide()
+
+local ignore
+
+local function setAlpha(b, a)
+	if ignore then return end
+	ignore = true
+	if b:IsMouseOver() then
+		b:SetAlpha(1)
+	else
+		b:SetAlpha(0)
+	end
+	ignore = nil
+end
+
+local function showFoo(self)
+    for _, v in ipairs(MICRO_BUTTONS) do
+        ignore = true
+        _G[v]:SetAlpha(1)
+        ignore = nil
+    end
+end
+
+local function hideFoo(self)
+    for _, v in ipairs(MICRO_BUTTONS) do
+        ignore = true
+        _G[v]:SetAlpha(0)
+        ignore = nil
+    end
+end
+
+for _, v in ipairs(MICRO_BUTTONS) do
+    v = _G[v]
+    hooksecurefunc(v, "SetAlpha", setAlpha)
+    v:HookScript("OnEnter", showFoo)
+    v:HookScript("OnLeave", hideFoo)
+    v:SetAlpha(0)
+end
+
+end)
