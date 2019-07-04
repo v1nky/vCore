@@ -165,7 +165,52 @@ end
 -- hide bagbar
 function vCore:HideBagBar()
     if not vCoreDB.HideBagBar then return end
-		MicroButtonAndBagsBar:Hide() 
+		local CF=CreateFrame("Frame")
+		CF:RegisterEvent("PLAYER_LOGIN")
+		CF:SetScript("OnEvent", function(self, event)
+		
+		CharacterMicroButton:ClearAllPoints()
+		CharacterMicroButton:SetPoint('BOTTOMLEFT', MicroButtonAndBagsBar, "BOTTOMLEFT", 6, 3)
+		MicroButtonAndBagsBar:Hide()
+		
+		local ignore
+		
+		local function setAlpha(b, a)
+			if ignore then return end
+			ignore = true
+			if b:IsMouseOver() then
+				b:SetAlpha(1)
+			else
+				b:SetAlpha(0)
+			end
+			ignore = nil
+		end
+		
+		local function showFoo(self)
+			for _, v in ipairs(MICRO_BUTTONS) do
+				ignore = true
+				_G[v]:SetAlpha(1)
+				ignore = nil
+			end
+		end
+		
+		local function hideFoo(self)
+			for _, v in ipairs(MICRO_BUTTONS) do
+				ignore = true
+				_G[v]:SetAlpha(0)
+				ignore = nil
+			end
+		end
+		
+		for _, v in ipairs(MICRO_BUTTONS) do
+			v = _G[v]
+			hooksecurefunc(v, "SetAlpha", setAlpha)
+			v:HookScript("OnEnter", showFoo)
+			v:HookScript("OnLeave", hideFoo)
+			v:SetAlpha(0)
+		end
+		
+		end)
 end
 
 -- hide gryphons
@@ -182,7 +227,7 @@ function vCore:HideNames()
 		PlayerName:SetAlpha(0);
 end
 
--- hide player name (added v2.5)
+-- hide stance bar
 function vCore:HideStanceBar()
 	if not vCoreDB.HideStanceBar then return end
 		StanceBarFrame:SetScript("OnUpdate", function(self) self:Hide() end)
@@ -310,51 +355,3 @@ function vCore:CastBarIcon()
 			end
 		)
 end
-
---testing 8.2
-local CF=CreateFrame("Frame")
-CF:RegisterEvent("PLAYER_LOGIN")
-CF:SetScript("OnEvent", function(self, event)
-
-CharacterMicroButton:ClearAllPoints()
-CharacterMicroButton:SetPoint('BOTTOMLEFT', MicroButtonAndBagsBar, "BOTTOMLEFT", 6, 3)
-MicroButtonAndBagsBar:Hide()
-
-local ignore
-
-local function setAlpha(b, a)
-	if ignore then return end
-	ignore = true
-	if b:IsMouseOver() then
-		b:SetAlpha(1)
-	else
-		b:SetAlpha(0)
-	end
-	ignore = nil
-end
-
-local function showFoo(self)
-    for _, v in ipairs(MICRO_BUTTONS) do
-        ignore = true
-        _G[v]:SetAlpha(1)
-        ignore = nil
-    end
-end
-
-local function hideFoo(self)
-    for _, v in ipairs(MICRO_BUTTONS) do
-        ignore = true
-        _G[v]:SetAlpha(0)
-        ignore = nil
-    end
-end
-
-for _, v in ipairs(MICRO_BUTTONS) do
-    v = _G[v]
-    hooksecurefunc(v, "SetAlpha", setAlpha)
-    v:HookScript("OnEnter", showFoo)
-    v:HookScript("OnLeave", hideFoo)
-    v:SetAlpha(0)
-end
-
-end)
